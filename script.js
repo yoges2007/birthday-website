@@ -1,25 +1,62 @@
+// Get elements
 const btn = document.getElementById("surpriseBtn");
+const music = document.getElementById("bgMusic");
+const wishBox = document.getElementById("wishBox");
+const giftBox = document.querySelector(".gift-box");
+const finalMessage = document.getElementById("finalMessage");
 
-btn.onclick = function(){
+// Open Surprise Button
+btn.addEventListener("click", function () {
 
-    document.getElementById("wishBox").style.display = "block";
-    document.getElementById("bgMusic").play();
+    // Show Birthday Wish
+    wishBox.style.display = "block";
+
+    // Change Button Text
     btn.innerHTML = "🎉 Enjoy Your Birthday 🎉";
 
-}
-function openGift(){
-document.querySelector(".gift-box").innerHTML="❤️";
-document.getElementById("bgMusic").play();
-confetti({
-    particleCount:250,
-    spread:180,
-    origin:{y:0.6}
+    // Play Music
+    music.play()
+        .then(() => {
+            console.log("Music Started");
+        })
+        .catch((error) => {
+            console.log("Music Error:", error);
+        });
 });
-const msg=document.getElementById("finalMessage");
 
-msg.style.opacity="1";
+// Gift Box Click
+function openGift() {
 
-msg.innerHTML=
-"🎉 Happy Birthday Gokul 🎉<br><br>May God Bless You With Happiness, Success, Good Health and Endless Smiles.<br><br>❤️ From Your Loving Brother Vetri ❤️";
+    // Change Gift Emoji
+    giftBox.innerHTML = "❤️";
 
+    // Play Music
+    music.play()
+        .then(() => {
+            console.log("Music Playing");
+        })
+        .catch((error) => {
+            console.log("Music Error:", error);
+        });
+
+    // Confetti Animation
+    confetti({
+        particleCount: 250,
+        spread: 180,
+        origin: {
+            y: 0.6
+        }
+    });
+
+    // Show Final Message
+    finalMessage.style.opacity = "1";
+
+    finalMessage.innerHTML = `
+        🎉 Happy Birthday Gokul 🎉
+        <br><br>
+        May God Bless You With Happiness,
+        Success, Good Health and Endless Smiles.
+        <br><br>
+        ❤️ From Your Loving Brother Vetri ❤️
+    `;
 }
