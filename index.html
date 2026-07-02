@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday Gokul</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="stars"></div>
+
+    <div class="balloons">
+        <span>🎈</span>
+        <span>🎈</span>
+        <span>🎈</span>
+        <span>🎈</span>
+        <span>🎈</span>
+        <span>🎈</span>
+        <span>🎈</span>
+        <span>🎈</span>
+    </div>
+
+    <div class="hearts">
+        <span>❤️</span>
+        <span>💖</span>
+        <span>💕</span>
+        <span>💗</span>
+        <span>❤️</span>
+    </div>
+
+    <div class="container">
+
+        <h3>🎉 Welcome 🎉</h3>
+
+        <h1>Happy Birthday</h1>
+
+        <h2>Gokul ❤️</h2>
+
+        <p>
+            Today is your special day.<br>
+            Wishing you happiness,<br>
+            success and lots of smiles.
+        </p>
+
+        <button id="surpriseBtn">
+            🎁 Open Your Surprise
+        </button>
+
+        <div class="gift-box" onclick="openGift()">
+            🎁
+        </div>
+
+        <h2 id="finalMessage"></h2>
+
+        <div id="wishBox" style="display:none;">
+
+            <h2>🎂 Happy Birthday Gokul 🎂</h2>
+
+            <img src="images/gokul.jpg.jpg" class="photo" alt="Gokul">
+
+            <p>
+                Dear Brother,<br><br>
+
+                Thank you for always being there for me.<br><br>
+
+                May God bless you with good health,
+                happiness, success and endless joy.<br><br>
+
+                Have a wonderful Birthday! 🎂🎉<br><br>
+
+                ❤️ From Vetri ❤️
+            </p>
+
+        </div>
+
+    </div>
+
+    <audio id="bgMusic" loop>
+        <source src="music/birthday.mp3.mp3" type="audio/mpeg">
+    </audio>
+
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
